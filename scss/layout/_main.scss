@@ -1,6 +1,6 @@
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   & > * {
     padding-bottom: 10rem;
   }
@@ -40,7 +40,7 @@ main {
       height: 3.2rem;
       fill: white;
       transition: all 0.5s;
-      box-shadow: 0 1.5rem 1rem rgba(black, 0.5);
+      box-shadow: 0 1.5rem 3rem rgba(black, 0.5);
       &:hover {
         filter: invert(0.4);
         //transform: scale(1.2);
@@ -96,4 +96,11 @@ main {
       }
     }
   }
+}
+
+.projects {
+  display: grid;
+  grid-gap: 4rem;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 50rem));
 }

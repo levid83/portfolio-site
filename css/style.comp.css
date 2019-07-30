@@ -10,5 +10,197 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
-  background-image: url(/img/background.jpg); }
+  background-image: linear-gradient(to right bottom, rgba(68, 68, 68, 0.95), rgba(238, 206, 26, 0.95)), url("../../img/background.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: left top;
+  color: #fff;
+  backdrop-filter: blur(15px);
+  height: 100%;
+  margin: 0; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background-image: linear-gradient(to right, rgba(73, 73, 73, 0.9) 20%, rgba(151, 130, 11, 0.9) 50%);
+    font-size: 2rem; }
+
+h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+.text-secondary {
+  color: #eece1a; }
+
+.card {
+  color: red;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side {
+    height: 52rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: black; }
+    .card__side--back {
+      transform: rotateY(10deg);
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(to right bottom, rgba(68, 68, 68, 0.85), rgba(238, 206, 26, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid grey; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: white;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
+.navigation {
+  display: none; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main > * {
+    padding-bottom: 10rem; }
+
+.me {
+  display: flex;
+  align-items: center; }
+  .me__picture {
+    padding-right: 5rem; }
+    .me__picture--image {
+      width: 25rem;
+      height: 25rem;
+      border: 2px solid #eece1a;
+      border-radius: 50%;
+      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.8);
+      transition: all 0.5s; }
+      .me__picture--image:hover {
+        filter: grayscale(100%) sepia(100%);
+        transform: scale(1.2);
+        border-width: 3px; }
+  .me__media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .me__media--icon-box {
+      margin-right: 1.2rem; }
+    .me__media--icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      fill: white;
+      transition: all 0.5s;
+      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5); }
+      .me__media--icon:hover {
+        filter: invert(0.4); }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "short short short" "bio bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.5rem; }
+  .about-info__short, .about-info__bio, .about-info__job {
+    background: #515151;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-bottom: #eece1a 5px solid;
+    box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: all 0.5s; }
+    .about-info__short:hover, .about-info__bio:hover, .about-info__job:hover {
+      box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.1); }
+  .about-info__short {
+    grid-area: short; }
+  .about-info__bio {
+    grid-area: bio; }
+  .about-info__job--1 {
+    grid-area: job1; }
+  .about-info__job--2 {
+    grid-area: job2; }
+  .about-info__job--3 {
+    grid-area: job3; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
