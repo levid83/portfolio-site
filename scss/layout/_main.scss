@@ -97,10 +97,16 @@ main {
     }
   }
 }
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-.projects {
-  display: grid;
-  grid-gap: 4rem;
-  justify-content: space-around;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 50rem));
+  & .projects {
+    width: 100%;
+    display: grid;
+    grid-gap: 4rem;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 50rem));
+  }
 }
