@@ -21,7 +21,14 @@ h3 {
       rgba(lighten($primary-color, 2), 0.9) 20%,
       rgba(darken($secondary-color, 20), 0.9) 50%
     );
+    font-size: 2rem;
   }
+}
+
+h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 a {

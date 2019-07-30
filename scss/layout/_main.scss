@@ -2,7 +2,7 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
   & > * {
-    padding-bottom: 20rem;
+    padding-bottom: 10rem;
   }
 }
 
@@ -44,6 +44,55 @@ main {
       &:hover {
         filter: invert(0.4);
         //transform: scale(1.2);
+      }
+    }
+  }
+}
+.about {
+  &-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+      "short short short"
+      "bio bio bio"
+      "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.5rem;
+
+    &__short,
+    &__bio,
+    &__job {
+      background: lighten($primary-color, 5);
+      margin-top: 1rem;
+      padding: 1rem;
+      border-bottom: $secondary-color 5px solid;
+      box-shadow: 0 1.5rem 1rem rgba(black, 0.5);
+      border-radius: 10px;
+      transition: all 0.5s;
+      &:hover {
+        box-shadow: 0 1.5rem 1rem rgba(black, 0.1);
+      }
+    }
+
+    &__short {
+      grid-area: short;
+    }
+
+    &__bio {
+      grid-area: bio;
+    }
+
+    &__job {
+      &--1 {
+        grid-area: job1;
+      }
+
+      &--2 {
+        grid-area: job2;
+      }
+
+      &--3 {
+        grid-area: job3;
       }
     }
   }
