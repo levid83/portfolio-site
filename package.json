@@ -4,10 +4,10 @@
   "description": "Responsive portfolio website",
   "main": "index.html",
   "scripts": {
-    "watch:scss": "node-sass scss/main.scss css/style.css -w",
+    "watch:scss": "node-sass scss/style.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:scss",
-    "compile:scss": "node-sass scss/main.scss css/style.comp.css",
+    "compile:scss": "node-sass scss/style.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -o css/style.prefix.css css/*.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:scss prefix:css compress:css"

@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Welcome To My Portfolio</title>
   </head>
-  <body> 
-    <header>
-      <nav class="navigation">
+  <body>
+    <div class="navigation">
+      <nav class="navigation__nav">
         <ul class="navigaion__list">
           <li class="navigation__item">
             <a href="#home-section" class="navigaion__link">Home</a>
@@ -24,11 +24,17 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
     <main>
-      <section class="home" id="home-section">
-        <div class="me">
-          <figure class="me__picture"></figure>
+      <section class="me" id="home-section">
+        <figure class="me__picture">
+          <img
+            src="img/portrait.jpg"
+            alt="Levente Danel"
+            class="me__picture--image"
+          />
+        </figure>
+        <div class="personal">
           <h1 class="lg-heading">
             Levente <span class="text-secondary">Danel</span>
           </h1>
@@ -36,9 +42,27 @@
             Full-Stack Developer & Entrepreneur
           </h2>
           <div class="me__media">
-            <svg class="me__media--facebook"></svg>
-            <svg class="me__media--linkedin"></svg>
-            <svg class="me__media--github"></svg>
+            <div class="me__media--icon-box">
+              <a href="#" target="__blank">
+                <svg class="me__media--icon">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="me__media--icon-box">
+              <a href="#" target="__blank">
+                <svg class="me__media--icon">
+                  <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="me__media--icon-box">
+              <a href="#" target="__blank">
+                <svg class="me__media--icon">
+                  <use xlink:href="img/sprite.svg#icon-github"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -75,62 +99,62 @@
         <h2 class="sm-heading">
           Check out some of my projects...
         </h2>
-            <ul class="projects">
-              <li class="projects__item">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#">
-                  <svg class="btn-dark"></svg>
-                </a>
-                <a href="#">
-                  <svg class="btn-light"></svg>
-                </a>
-              </li>
-              <li class="projects__item">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#">
-                  <svg class="btn-dark"></svg>
-                </a>
-                <a href="#">
-                  <svg class="btn-light"></svg>
-                </a>
-              </li>
-              <li class="projects__item">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#">
-                  <svg class="btn-dark"></svg>
-                </a>
-                <a href="#">
-                  <svg class="btn-light"></svg>
-                </a>
-              </li>
-              <li class="projects__item">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#">
-                  <svg class="btn-dark"></svg>
-                </a>
-                <a href="#">
-                  <svg class="btn-light"></svg>
-                </a>
-              </li>
-              <li class="projects__item">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#">
-                  <svg class="btn-dark"></svg>
-                </a>
-                <a href="#">
-                  <svg class="btn-light"></svg>
-                </a>
-              </li>
-              <li class="projects__item">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#">
-                  <svg class="btn-dark"></svg>
-                </a>
-                <a href="#">
-                  <svg class="btn-light"></svg>
-                </a>
-              </li>
-            </div>
+        <ul class="projects">
+          <li class="projects__item">
+            <a href="#"><img src="" alt=""/></a>
+            <a href="#">
+              <svg class="btn-dark"></svg>
+            </a>
+            <a href="#">
+              <svg class="btn-light"></svg>
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="#"><img src="" alt=""/></a>
+            <a href="#">
+              <svg class="btn-dark"></svg>
+            </a>
+            <a href="#">
+              <svg class="btn-light"></svg>
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="#"><img src="" alt=""/></a>
+            <a href="#">
+              <svg class="btn-dark"></svg>
+            </a>
+            <a href="#">
+              <svg class="btn-light"></svg>
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="#"><img src="" alt=""/></a>
+            <a href="#">
+              <svg class="btn-dark"></svg>
+            </a>
+            <a href="#">
+              <svg class="btn-light"></svg>
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="#"><img src="" alt=""/></a>
+            <a href="#">
+              <svg class="btn-dark"></svg>
+            </a>
+            <a href="#">
+              <svg class="btn-light"></svg>
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="#"><img src="" alt=""/></a>
+            <a href="#">
+              <svg class="btn-dark"></svg>
+            </a>
+            <a href="#">
+              <svg class="btn-light"></svg>
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="contact" id="contact-section">
         <h1 class="lg-heading">
@@ -142,11 +166,10 @@
         </h2>
         <div class="contact__boxes">
           <div>
-            <span class="text-secondary">Email: </span> levente.danel@gmail.com
+            <span class="text-secondary">Email: </span>
+            levente.danel@gmail.com
           </div>
-          <div>
-            <span class="text-secondary">Phone: </span> (000) 000-0000
-          </div>
+          <div><span class="text-secondary">Phone: </span> (000) 000-0000</div>
         </div>
       </section>
     </main>

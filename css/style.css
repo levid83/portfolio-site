@@ -1,1 +1,87 @@
-*,*::after,*::before{margin:0;padding:0;-webkit-box-sizing:inherit;box-sizing:inherit}html{font-size:62.5%}body{-webkit-box-sizing:border-box;box-sizing:border-box;padding:3rem;background-image:url(/img/background.jpg)}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(to right bottom, rgba(68, 68, 68, 0.95), rgba(238, 206, 26, 0.95)), url("../../img/background.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: left top;
+  color: #fff;
+  backdrop-filter: blur(15px);
+  height: 100%;
+  margin: 0; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background-image: linear-gradient(to right, rgba(73, 73, 73, 0.9) 20%, rgba(151, 130, 11, 0.9) 50%); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+.text-secondary {
+  color: #eece1a; }
+
+.navigation {
+  display: none; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main > * {
+    padding-bottom: 20rem; }
+
+.me {
+  display: flex;
+  align-items: center; }
+  .me__picture {
+    padding-right: 5rem; }
+    .me__picture--image {
+      width: 25rem;
+      height: 25rem;
+      border: 2px solid #eece1a;
+      border-radius: 50%;
+      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.8);
+      transition: all 0.5s; }
+      .me__picture--image:hover {
+        filter: grayscale(100%) sepia(100%);
+        transform: scale(1.2);
+        border-width: 3px; }
+  .me__media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .me__media--icon-box {
+      margin-right: 1.2rem; }
+    .me__media--icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      fill: white;
+      transition: all 0.5s;
+      box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.5); }
+      .me__media--icon:hover {
+        filter: invert(0.4); }
