@@ -133,6 +133,19 @@ main {
   }
 }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__categories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 footer {
   height: 6rem;
   padding: 1rem;
