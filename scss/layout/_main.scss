@@ -2,16 +2,21 @@ main {
   padding: 4rem;
   min-height: 100vh;
   & > * {
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 }
 
 .me {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 
   &__picture {
     padding-right: 5rem;
+    @media only screen and (max-width: 600px) {
+      padding-right: 0;
+    }
     &--image {
       width: 25rem;
       height: 25rem;
@@ -32,67 +37,42 @@ main {
     align-items: center;
     justify-content: flex-start;
 
-    &--icon-box {
-      margin-right: 1.2rem;
-    }
     &--icon {
       width: 3.2rem;
       height: 3.2rem;
+      margin-right: 1.2rem;
       fill: white;
       transition: all 0.5s;
-      box-shadow: 0 1.5rem 3rem rgba(black, 0.5);
       &:hover {
         filter: invert(0.4);
-        //transform: scale(1.2);
       }
     }
   }
 }
 .about {
   &-info {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas:
-      "short short short"
-      "bio bio bio"
-      "job1 job2 job3";
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+
+    &__jobs {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 70rem));
+      justify-content: space-around;
+    }
 
     &__short,
     &__bio,
-    &__job {
+    &__jobs--job {
       background: lighten($primary-color, 5);
-      margin-top: 1rem;
+      margin-top: 2rem;
       padding: 1rem;
       border-bottom: $secondary-color 5px solid;
       box-shadow: 0 1.5rem 1rem rgba(black, 0.5);
-      border-radius: 10px;
       transition: all 0.5s;
       &:hover {
         box-shadow: 0 1.5rem 1rem rgba(black, 0.1);
-      }
-    }
-
-    &__short {
-      grid-area: short;
-    }
-
-    &__bio {
-      grid-area: bio;
-    }
-
-    &__job {
-      &--1 {
-        grid-area: job1;
-      }
-
-      &--2 {
-        grid-area: job2;
-      }
-
-      &--3 {
-        grid-area: job3;
       }
     }
   }
@@ -105,8 +85,59 @@ main {
   & .projects {
     width: 100%;
     display: grid;
-    grid-gap: 4rem;
-    justify-content: space-between;
+    grid-gap: 2rem;
+    justify-content: space-around;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 50rem));
   }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__items {
+    width: 100%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 30rem));
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+    transition: all 0.5s ease-out;
+
+    background: lighten($primary-color, 5);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-bottom: $secondary-color 5px solid;
+    box-shadow: 0 1.5rem 1rem rgba(black, 0.5);
+    &:hover {
+      box-shadow: 0 1.5rem 1rem rgba(black, 0.1);
+    }
+
+    &--link {
+      display: flex;
+      align-items: center;
+    }
+
+    &--icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      margin-right: 1.2rem;
+      fill: #00aff0;
+      transition: all 0.5s;
+      &:hover {
+        filter: invert(0.4);
+      }
+    }
+  }
+}
+
+footer {
+  height: 6rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background: #2b2b2b;
+  color: #fff;
 }

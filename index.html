@@ -70,9 +70,9 @@
         <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
 
         <div class="about-info">
-          <div class="about-info__short sm-heading">
+          <h2 class="sm-heading">
             Let me tell you a few things...
-          </div>
+          </h2>
           <div class="about-info__bio">
             <h3 class="text-secondary">Bio</h3>
             <p>
@@ -82,33 +82,34 @@
               Praesentium, laborum.
             </p>
           </div>
-
-          <div class="about-info__job job--1">
-            <h3 class="text-secondary">Webworks</h3>
-            <h6>Front End Developer</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates perferendis totam enim. Nesciunt porro dolores expedita
-              dolor necessitatibus deserunt nemo.
-            </p>
-          </div>
-          <div class="about-info__job job--2">
-            <h3 class="text-secondary">Webshop</h3>
-            <h6>Full Stack Developer</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates perferendis totam enim. Nesciunt porro dolores expedita
-              dolor necessitatibus deserunt nemo.
-            </p>
-          </div>
-          <div class="about-info__job job--3">
-            <h3 class="text-secondary">Jamminbutter</h3>
-            <h6>Full-Stack Developer</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates perferendis totam enim. Nesciunt porro dolores expedita
-              dolor necessitatibus deserunt nemo.
-            </p>
+          <div class="about-info__jobs">
+            <div class="about-info__jobs--job">
+              <h3 class="text-secondary">Webworks</h3>
+              <h6>Front End Developer</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates perferendis totam enim. Nesciunt porro dolores
+                expedita dolor necessitatibus deserunt nemo.
+              </p>
+            </div>
+            <div class="about-info__jobs--job">
+              <h3 class="text-secondary">Webshop</h3>
+              <h6>Full Stack Developer</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates perferendis totam enim. Nesciunt porro dolores
+                expedita dolor necessitatibus deserunt nemo.
+              </p>
+            </div>
+            <div class="about-info__jobs--job">
+              <h3 class="text-secondary">Jamminbutter</h3>
+              <h6>Full-Stack Developer</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates perferendis totam enim. Nesciunt porro dolores
+                expedita dolor necessitatibus deserunt nemo.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -275,12 +276,27 @@
         <h2 class="sm-heading">
           This is how you can reach me...
         </h2>
-        <div class="contact__boxes">
-          <div>
-            <span class="text-secondary">Email: </span>
-            levente.danel@gmail.com
-          </div>
-          <div><span class="text-secondary">Phone: </span> (000) 000-0000</div>
+        <div class="contact__items">
+          <a class="contact__items--link" href="mailto:levente.danel@gmail.com">
+            <svg class="contact__items--icon">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            <span>levente.danel@gmail.com</span>
+          </a>
+          <a class="contact__items--link" href="tel:+0000000000">
+            <svg class="contact__items--icon">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <span>(000) 000-0000</span>
+          </a>
+          <a
+            class="contact__items--link"
+            href="skype:danellevente@hotmail.com?chat"
+          >
+            <svg class="contact__items--icon">
+              <use xlink:href="img/sprite.svg#icon-skype"></use>
+            </svg>
+          </a>
         </div>
       </section>
     </main>
