@@ -1,0 +1,61 @@
+@mixin shadow {
+  box-shadow: 0 1.5rem 3rem rgba($color-shadow, 0.5);
+}
+@mixin shadowHover {
+  box-shadow: 0 1.5rem 3rem rgba($color-shadow, 0.1);
+}
+
+@mixin contentBox {
+  background: lighten($color-primary, 5);
+  margin-top: 2rem;
+  padding: 1rem;
+  border-bottom: $color-secondary 5px solid;
+  @include shadow;
+  transition: all 0.5s;
+  &:hover {
+    @include shadowHover;
+  }
+}
+
+@mixin icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 1.2rem;
+  fill: currentColor;
+  transition: all 0.5s;
+  &:hover {
+    filter: invert(0.4);
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}

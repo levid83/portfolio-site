@@ -1,7 +1,11 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+$color-primary: #444;
+$color-secondary: #eece1a;
+
+$color-text: #fff;
+$color-shadow: #000;
+
 $show-home-image: true;
 $home-image: url(../../img/background.jpg);
 $background-opacity: 0.95;
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
+
+$default-font-size: 1.6rem;

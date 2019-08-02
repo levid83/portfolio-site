@@ -5,39 +5,37 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h6 {
   margin: 0;
   font-weight: 400;
+  font-size: 2rem;
+
+  &.sm-heading {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.2rem 1rem;
+    background-image: linear-gradient(
+      to right,
+      rgba(lighten($color-primary, 2), 0.9) 20%,
+      rgba(darken($color-secondary, 20), 0.9) 50%
+    );
+  }
 
   &.lg-heading {
     font-size: 4rem;
   }
-
-  &.sm-heading {
-    width: 100%;
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background-image: linear-gradient(
-      to right,
-      rgba(lighten($primary-color, 2), 0.9) 20%,
-      rgba(darken($secondary-color, 20), 0.9) 50%
-    );
-    font-size: 2rem;
-    border-radius: 0.5rem;
-  }
-}
-
-h6 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
 }
 
 a {
-  color: #fff;
+  font-size: $default-font-size;
+  color: $color-text;
   text-decoration: none;
+}
+p {
+  font-size: $default-font-size;
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $color-secondary;
 }

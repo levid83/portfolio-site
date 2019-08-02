@@ -4,18 +4,21 @@
   }
 
   &__button {
-    background-color: $primary-color;
+    background-color: $color-primary;
     height: 7rem;
     width: 7rem;
     position: fixed;
     top: 4rem;
     right: 4rem;
     border-radius: 50%;
-    border: 2px solid $secondary-color;
+    border: 2px solid $color-secondary;
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    @include shadow;
     text-align: center;
     cursor: pointer;
+    &:hover {
+      @include shadowHover;
+    }
   }
 
   &__background {
@@ -25,7 +28,7 @@
     position: fixed;
     top: 4.5rem;
     right: 4.5rem;
-    background-image: radial-gradient($primary-color, $secondary-color);
+    background-image: radial-gradient($color-primary, $color-secondary);
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -57,14 +60,12 @@
   }
 
   &__link {
-    cursor: pointer;
     &:link,
     &:visited {
       display: inline-block;
       font-size: 3rem;
       font-weight: 300;
       padding: 1rem 2rem;
-      color: white;
       text-decoration: none;
       text-transform: uppercase;
       transition: all 0.4s;
@@ -76,7 +77,7 @@
 
     &:hover,
     &:active {
-      color: $secondary-color;
+      color: $color-secondary;
       transform: translateX(1rem);
     }
   }
@@ -99,7 +100,7 @@
     &::after {
       width: 3rem;
       height: 2px;
-      background-color: white;
+      background-color: $color-text;
       display: inline-block;
     }
 
@@ -125,6 +126,10 @@
 
   &__button:hover &__icon::after {
     top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
   }
 
   &__checkbox:checked + &__button &__icon::before {
