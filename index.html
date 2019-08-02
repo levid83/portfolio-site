@@ -8,19 +8,30 @@
   </head>
   <body>
     <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
       <nav class="navigation__nav">
-        <ul class="navigaion__list">
+        <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#home-section" class="navigaion__link">Home</a>
+            <a href="#home-section" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
-            <a href="#about-section" class="navigaion__link">About me</a>
+            <a href="#about-section" class="navigation__link">About me</a>
           </li>
           <li class="navigation__item">
-            <a href="#portfolio-section" class="navigaion__link">Portfolio</a>
+            <a href="#portfolio-section" class="navigation__link">Portfolio</a>
           </li>
           <li class="navigation__item">
-            <a href="#contact-section" class="navigaion__link">Contact</a>
+            <a href="#skills-section" class="navigation__link">Skills</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact-section" class="navigation__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -386,5 +397,6 @@
       </section>
     </main>
     <footer class="footer">Copyright &copy; 2019</footer>
+    <script src="js/index.js" ></script>
   </body>
 </html>
