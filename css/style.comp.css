@@ -1,3 +1,11 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +15,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
@@ -43,8 +60,12 @@ h6 {
     font-size: 4rem; }
 
 a {
+  font-size: 1.6rem;
   color: #fff;
   text-decoration: none; }
+
+p {
+  font-size: 1.6rem; }
 
 .text-secondary {
   color: #eece1a; }
@@ -63,7 +84,6 @@ a {
     height: 30rem;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
     transition: all 0.8s ease; }
@@ -101,7 +121,6 @@ a {
       list-style: none; }
       .card__details ul li {
         text-align: center;
-        font-size: 1.5rem;
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid grey; }
@@ -148,9 +167,9 @@ a {
       height: 10rem;
       transition: all 1s; }
       .skill__picture > img:hover {
-        transform: rotateY(360deg); }
+        transform: rotateY(180deg); }
     .skill__picture--caption {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       text-align: center; }
 
 .navigation__checkbox {
@@ -275,7 +294,7 @@ main {
   justify-content: center; }
   .me__picture {
     padding-right: 5rem; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       .me__picture {
         padding-right: 0; } }
     .me__picture--image {
@@ -306,12 +325,11 @@ main {
 .about-info {
   display: flex;
   flex-direction: column;
-  font-size: 1.8rem;
   justify-content: center; }
   .about-info__jobs {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 70rem));
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 50rem));
     justify-content: space-around; }
   .about-info__bio, .about-info__jobs--job {
     background: #515151;
@@ -365,12 +383,10 @@ main {
       box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1); }
     .contact__items--link {
       display: flex;
-      font-size: 2rem;
       align-items: center; }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 37.5em) {
         .contact__items--link {
-          flex-direction: column;
-          font-size: 1.5rem; } }
+          flex-direction: column; } }
     .contact__items--icon {
       width: 3.2rem;
       height: 3.2rem;
