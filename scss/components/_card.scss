@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  height: 30rem;
+  height: 35rem;
   max-width: 50rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 30rem;
+    height: 35rem;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
@@ -62,13 +62,7 @@
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary, 0.85),
-      rgba($color-secondary, 0.85)
-    );
-
+    background-color: $color-primary;
     border-radius: 5px;
   }
 

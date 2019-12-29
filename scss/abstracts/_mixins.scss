@@ -8,7 +8,7 @@
 @mixin contentBox {
   background: lighten($color-primary, 5);
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   border-bottom: $color-secondary 5px solid;
   @include shadow;
   transition: all 0.5s;
