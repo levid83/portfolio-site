@@ -9,7 +9,7 @@ h3,
 h6 {
   margin: 0;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   &.sm-heading {
     width: 100%;
@@ -23,7 +23,7 @@ h6 {
   }
 
   &.lg-heading {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -36,6 +36,7 @@ a {
 p,
 ul {
   font-size: $default-font-size;
+  text-align: justify;
 }
 
 ul {

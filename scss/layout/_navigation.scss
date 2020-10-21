@@ -4,81 +4,114 @@
   }
 
   &__button {
-    background-color: $color-primary;
-    height: 7rem;
-    width: 7rem;
-    position: fixed;
-    top: 4rem;
-    right: 4rem;
-    border-radius: 50%;
-    border: 2px solid $color-secondary;
-    z-index: 2000;
-    @include shadow;
-    text-align: center;
-    cursor: pointer;
-    &:hover {
-      @include shadowHover;
+    display: none;
+    @include respond(phone) {
+      display: block;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      height: 6rem;
+      width: 6rem;
+      z-index: 2000;
+      background-color: $color-primary;
+      border-radius: 50%;
+      border: 2px solid $color-secondary;
+      @include shadow;
+      text-align: center;
+
+      &:hover {
+        @include shadowHover;
+      }
     }
   }
 
   &__background {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    position: fixed;
-    top: 4.5rem;
-    right: 4.5rem;
-    background-image: radial-gradient($color-primary, $color-secondary);
-    z-index: 1000;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      height: 5rem;
+      width: 5rem;
+      z-index: 1000;
+      background-image: radial-gradient($color-primary, $color-secondary);
+      border-radius: 50%;
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
   }
 
   &__nav {
-    height: 100vh;
     position: fixed;
+    height: 4.5rem;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 1500;
-
-    opacity: 0;
-    width: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: $color-primary;
+    border-bottom: 2px solid $color-secondary;
+    @include shadow;
+    @include respond(phone) {
+      height: 100vh;
+      width: 0;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
     width: 100%;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    @include respond(phone) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
+    }
   }
 
   &__item {
-    margin: 1rem;
+    @include respond(phone) {
+      margin: 1rem;
+    }
   }
 
   &__link {
     &:link,
     &:visited {
       display: inline-block;
-      font-size: 3rem;
-      font-weight: 300;
+      @include respond(phone) {
+        font-size: 3rem;
+        font-weight: 300;
+      }
       padding: 1rem 2rem;
       text-decoration: none;
       text-transform: uppercase;
-      transition: all 0.4s;
-      span {
-        margin-right: 1.5rem;
-        display: inline-block;
+      @include respond(phone) {
+        transition: all 0.4s;
+        span {
+          display: inline-block;
+          margin-right: 1.5rem;
+        }
       }
     }
 
     &:hover,
     &:active {
       color: $color-secondary;
-      transform: translateX(1rem);
+      @include respond(phone) {
+        transform: translateX(1rem);
+      }
     }
   }
 
@@ -87,28 +120,28 @@
   }
 
   &__checkbox:checked ~ &__nav {
-    opacity: 1;
     width: 100%;
+    opacity: 1;
   }
 
   &__icon {
     position: relative;
-    margin-top: 3.2rem;
+    margin-top: 2.7rem;
 
     &,
     &::before,
     &::after {
+      display: inline-block;
       width: 3rem;
       height: 2px;
       background-color: $color-text;
-      display: inline-block;
     }
 
     &::before,
     &::after {
-      content: "";
       position: absolute;
       left: 0;
+      content: "";
       transition: all 0.2s;
     }
 

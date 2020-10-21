@@ -1,45 +1,34 @@
 .card {
   position: relative;
+  top: 0;
+  left: 0;
   height: 35rem;
   max-width: 50rem;
-  perspective: 150rem;
-  -moz-perspective: 150rem;
+  overflow: hidden;
+  @include shadow;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-secondary, $background-opacity),
+    rgba($color-primary, $background-opacity)
+  );
+  cursor: pointer;
 
-  &__side {
+  &--overlay {
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 35rem;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    @include shadow;
-    transition: all 0.8s ease;
-
-    &--front {
-      background-image: linear-gradient(
-        to right,
-        rgba($color-secondary, $background-opacity),
-        rgba($color-primary, $background-opacity)
-      );
-    }
-
-    &--back {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transform: rotateY(180deg);
-      background-color: $color-primary;
-    }
+    right: 0;
+    padding-bottom: 4rem;
+    background-color: $color-overlay-background;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
   }
 
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &__side--back {
-    transform: rotateY(0);
+  &:hover &--overlay {
+    opacity: 0.98;
   }
 
   &__picture {
@@ -67,14 +56,14 @@
   }
 
   &__details {
-    padding: 3rem;
-
     ul {
       list-style: none;
+      line-height: 1.5rem;
 
       li {
         text-align: center;
-        padding: 1rem;
+        padding: 1rem 0;
+        font-size: 1rem;
 
         &:not(:last-child) {
           border-bottom: 1px solid grey;
@@ -86,10 +75,9 @@
   &__cta {
     display: flex;
     height: 100%;
-    margin-bottom: 1rem;
+    justify-content: space-around;
     & > a {
-      display: inline-block;
-      margin: auto 10rem;
+      margin: auto;
     }
   }
 
