@@ -1,6 +1,6 @@
 main {
-  max-width: 80%;
-  margin: 4rem auto;
+  max-width: 60%;
+  margin: 6rem auto;
   @include respond(tab-port) {
     max-width: 100%;
     margin-left: 1rem;
@@ -8,11 +8,11 @@ main {
   }
 
   @include respond(phone) {
-    margin: 1rem;
+    margin: 0.5rem;
   }
 
   & > * {
-    padding-top: 5vw;
+    padding-top: 2vw;
   }
 }
 
@@ -29,13 +29,19 @@ main {
 
   &__picture {
     &--image {
-      width: 20rem;
-      height: 20rem;
+      width: 15rem;
+      height: 15rem;
       border: 2px solid $color-secondary;
       border-radius: 50%;
       @include shadow;
       filter: grayscale(100%) sepia(100%);
       transition: all 0.5s;
+
+      @include respond(phone) {
+        width: 10rem;
+        height: 10rem;
+      }
+
       &:hover {
         filter: none;
         @include shadowHover;

@@ -53,6 +53,7 @@
     border-bottom: 2px solid $color-secondary;
     @include shadow;
     @include respond(phone) {
+      left: -400px;
       height: 100vh;
       width: 0;
       opacity: 0;
@@ -120,6 +121,7 @@
   }
 
   &__checkbox:checked ~ &__nav {
+    left: 0;
     width: 100%;
     opacity: 1;
   }

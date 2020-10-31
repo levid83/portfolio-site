@@ -20,7 +20,7 @@ html {
       font-size: 75%; } }
   @media only screen and (max-width: 56.25em) {
     html {
-      font-size: 62.5%; } }
+      font-size: 81.25%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 87.5%; } }
@@ -97,14 +97,14 @@ ul {
     bottom: 0;
     left: 0;
     right: 0;
-    padding-bottom: 4rem;
+    padding: 1rem;
     background-color: #444;
     color: white;
     opacity: 0;
     transition: opacity 0.5s ease;
     text-align: center; }
   .card:hover .card--overlay {
-    opacity: 0.98; }
+    opacity: 1; }
   .card__picture img {
     width: 100%; }
   .card__heading {
@@ -123,23 +123,27 @@ ul {
     border-radius: 5px; }
   .card__details ul {
     list-style: none;
-    line-height: 1.5rem; }
+    line-height: 1.2rem; }
     .card__details ul li {
       text-align: center;
       padding: 1rem 0;
-      font-size: 1rem; }
+      font-size: 1.2rem;
+      color: #eece1a; }
       .card__details ul li:not(:last-child) {
         border-bottom: 1px solid grey; }
   .card__cta {
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
     display: flex;
-    height: 100%;
     justify-content: space-around; }
     .card__cta > a {
       margin: auto; }
   .card--icon {
     width: 3.2rem;
     height: 3.2rem;
-    fill: #eece1a;
+    fill: #fff;
     transition: all 0.5s; }
     .card--icon:hover {
       filter: invert(0.4); }
@@ -227,6 +231,7 @@ ul {
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5); }
   @media only screen and (max-width: 37.5em) {
     .navigation__nav {
+      left: -400px;
       height: 100vh;
       width: 0;
       opacity: 0;
@@ -281,6 +286,7 @@ ul {
   transform: scale(80); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
+  left: 0;
   width: 100%;
   opacity: 1; }
 
@@ -320,8 +326,8 @@ ul {
   transform: rotate(-135deg); }
 
 main {
-  max-width: 80%;
-  margin: 4rem auto; }
+  max-width: 60%;
+  margin: 6rem auto; }
   @media only screen and (max-width: 56.25em) {
     main {
       max-width: 100%;
@@ -329,9 +335,9 @@ main {
       margin-right: 1rem; } }
   @media only screen and (max-width: 37.5em) {
     main {
-      margin: 1rem; } }
+      margin: 0.5rem; } }
   main > * {
-    padding-top: 5vw; }
+    padding-top: 2vw; }
 
 .me {
   display: flex;
@@ -343,13 +349,17 @@ main {
       flex-direction: column;
       text-align: center; } }
   .me__picture--image {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     border: 2px solid #eece1a;
     border-radius: 50%;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
     filter: grayscale(100%) sepia(100%);
     transition: all 0.5s; }
+    @media only screen and (max-width: 37.5em) {
+      .me__picture--image {
+        width: 10rem;
+        height: 10rem; } }
     .me__picture--image:hover {
       filter: none;
       box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1); }
