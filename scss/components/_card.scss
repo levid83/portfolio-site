@@ -2,8 +2,8 @@
   position: relative;
   top: 0;
   left: 0;
-  height: 35rem;
-  max-width: 50rem;
+  min-height: 25rem;
+  max-width: 60rem;
   overflow: hidden;
   @include shadow;
   background-image: linear-gradient(
