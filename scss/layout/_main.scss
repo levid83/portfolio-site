@@ -37,11 +37,6 @@ main {
       filter: grayscale(100%) sepia(100%);
       transition: all 0.5s;
 
-      @include respond(phone) {
-        width: 10rem;
-        height: 10rem;
-      }
-
       &:hover {
         filter: none;
         @include shadowHover;
